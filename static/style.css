@@ -1,0 +1,139 @@
+body {
+    background-image: url(bg2.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+   
+}
+
+.main {
+    display: inline-block;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    border: 0.5px solid white;
+    border-radius: 10px;
+    width: 500px;
+    height: 350px;
+    backdrop-filter: blur(6px);
+    box-shadow: 1px 1px 20px 3px black;
+    margin-top: 90px;
+
+}
+
+h1 {
+    color: white;
+    font-family: "Merriweather", serif;
+}
+
+.user {
+    height: 65px;
+}
+
+.password {
+    height: 45px;
+}
+
+#name {
+
+    border: 2px solid white;
+    height: 43px;
+    width: 250px;
+    border-radius: 18px;
+    background: transparent;
+    color: rgb(255, 255, 255);
+    position: relative;
+    left: 10px;
+    padding-left: 10px;
+    outline: none;
+    padding-bottom: 6px;
+}
+#gmail {
+
+    border: 2px solid white;
+    height: 39px;
+    width: 250px;
+    border-radius: 18px;
+    background: transparent;
+    color: rgb(255, 255, 255);
+    position: relative;
+    left: 10px;
+    padding-left: 10px;
+    outline: none;
+}
+
+
+#pass {
+    outline: none;
+    padding-left: 10px;
+    border: 2px solid white;
+    height: 43px;
+    width: 250px;
+    border-radius: 18px;
+    background: transparent;
+    color: white;
+    position: relative;
+    left: 10px;
+    padding-bottom: 6px;
+}
+
+.oneline {
+    display: flex;
+    justify-content: space-around;
+    color: white;
+
+    padding: 5px 100px;
+
+}
+
+#button {
+    height: 40px;
+    width: 250px;
+    border: 2px solid white;
+    border-radius: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+#button:hover{
+background-color: rgb(0, 157, 255);
+}
+.new {
+
+    display: inline-block;
+    color: white;
+    padding-top: 9px;
+}
+
+.user i {
+    position: relative;
+    right: 22px;
+}
+
+.password i {
+    position: relative;
+    right: 22px;
+}
+#register{
+    color: white;
+    text-decoration: underline;
+    
+    
+}
+#register:hover{
+    color: blue;
+    text-decoration: underline;
+    
+    
+}
+input::placeholder{
+    padding-left: 10px;
+    color: #ffffff;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+}
+.login{
+    margin-top: 10px;
+}

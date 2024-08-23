@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+    display: flex;
+   align-items:center;
+   justify-content: center;
+   margin-top: 50px;
+   font-family: "Playwrite DE Grund", cursive;
+   background-color: rgb(199, 241, 247);
+   background-image: url('bg.jpg');
+
+}
+.cantainar{
+    height: 393px;
+    width: 313px;
+    border: 4px solid #02ea34;
+    border-radius: 6px;
+
+}
+#user{
+    height: 66px;
+    width: 310px;
+    outline: none;
+    font-size: 20px;
+    text-align: center;
+    background-color: #0d283b;
+    color: white;
+} 
+#valuein{
+    height: 322px;
+    width: 313px;
+    /* margin-top: 25px; */
+   /* margin-left: 5px; */
+  overflow: hidden;
+  /* background-color: rgb(173, 251, 144); */
+  backdrop-filter: blur(10px);
+ 
+}
+button{
+    height: 48px;
+    width: 43px;
+    border: 1px solid black;
+    border-radius: 14px;
+    margin: 8px 14px;
+    box-shadow: 6px 4px 0px 1px rgb(0, 0, 0);
+    font-size: 25px;
+    cursor: pointer;
+    border: 2px solid #fff900;
+}
+#btn1:active{
+    background-color:rgb(127, 0, 253);
+
+}
+#btn2:active{
+    background-color:rgb(127, 0, 253);
+
+}
+#btn3:active{
+    background-color:rgb(127, 0, 253);
+
+}
+#btn8:active{
+    background-color:rgb(127, 0, 253);
+
+}
+#btn12:active{
+    background-color:rgb(127, 0, 253);
+
+}
+#btn16:active{
+    background-color:rgb(127, 0, 253);
+
+}
+#btn4:active{
+    background-color:rgb(127, 0, 253);
+
+}
+#btn15:active{
+    background-color:rgb(127, 0, 253);
+
+}
+#btn5:active{
+    background-color: #009ccc;
+
+}
+#btn7:active{
+    background-color: #009ccc;
+
+}
+#btn11:active{
+    background-color: #009ccc;
+
+}
+#btn6:active{
+    background-color: #009ccc;
+
+}
+#btn20:active{
+    background-color: #009ccc;
+
+}
+#btn19:active{
+    background-color: #009ccc;
+
+}
+#btn9:active{
+    background-color: #dc0000;
+
+}
+#btn10:active{
+    background-color: #dc0000;
+
+}
+#btn14:active{
+    background-color: #dc0000;
+
+}
+#btn18:active{
+    background-color: #dc0000;
+
+}
+#btn13:active{
+    background-color: #b600a9
+
+}
+#btn17:active{
+    background-color: #b600a9
+
+}
+#btn1,#btn2,#btn3,#btn8,#btn12,#btn16,#btn4,#btn15{
+    background-color: rebeccapurple; 
+    color: white;
+}
+#btn5,#btn7,#btn11,#btn6,#btn20,#btn19{
+    background-color: #60b8d2;
+}
+#btn9,#btn10,#btn14,#btn18{
+    background-color: #ff5050;
+    color: white;
+}
+#btn13,#btn17{
+    background-color: #ff13f0;
+}
+
+
+
