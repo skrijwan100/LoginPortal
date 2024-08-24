@@ -48,7 +48,7 @@ def register():
         name = request.form['name']
         gmail = request.form['gmail']
         password = request.form['password']
-        cursor = db.cursor()  # Ensure cursor is created for each use
+        cursor = db.cursor() 
         cursor.execute("SELECT * FROM users WHERE email=%s", (gmail,))
         user = cursor.fetchone()
         cursor.close()
