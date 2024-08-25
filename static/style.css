@@ -138,3 +138,7 @@ input::placeholder{
 .login{
     margin-top: 10px;
 }
+button:active{
+    background-color: rgb(105, 187, 238);
+
+}

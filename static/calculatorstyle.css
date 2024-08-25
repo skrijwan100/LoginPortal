@@ -4,13 +4,35 @@
 }
 body{
     overflow: hidden;
+    height: 100vh;
     display: flex;
    align-items:center;
-   justify-content: center;
+   
+   flex-direction: column;
+   
    margin-top: 50px;
    font-family: "Playwrite DE Grund", cursive;
    background-color: rgb(199, 241, 247);
    background-image: url('bg.jpg');
+
+}
+img{
+    height: 35px;
+    background-color: #02ea34;
+}
+img:active{
+    background-color: #92e9a5;
+}
+a{
+    text-decoration: none;
+    color: #02ea34;
+}
+nav{
+    cursor: pointer;
+    width: 60vw;
+    text-align: end;
+    margin-bottom: 10px;
+    color: #02ea34;
 
 }
 .cantainar{
