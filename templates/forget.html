@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login form</title>
+    <title>Forgrt password</title>
   
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="shortcut icon" href="static/Login_portal_logo.jpeg" type="image/x-icon">
@@ -25,24 +25,22 @@
     {% endif %}
     {% endwith %}
     <div class="main">
-        <h1>Registrar</h1>
-        <form action="/register" method="POST">
+        <h1>Reset password</h1>
+        <form action="/password" method="POST" style="    margin-top: 30px;">
             <div class="user">
-                <input type="text" placeholder="Enter your name" id="name" name="name" required>
-                <i class='bx bxs-user'></i>
+                <input type="text" placeholder="Enter your old password" id="name" name="oldpassword" required>
+                <i class='bx bxs-lock'></i>
             </div>
             <div class="user">
-                <input type="email" placeholder="email" id="gmail" name="gmail" required>
-                <i class='bx bx-envelope'></i>
-                
-               
+                <input type="text" placeholder="Enter your new password" id="gmail" name="newpassword" required>
+                <i class='bx bxs-lock'></i>
             </div>
-            <div class="password ">
-                <input type="password" placeholder="password" id="pass" name="password" required autocomplete="new-password">
+            <div class="user">
+                <input type="text" placeholder="Reenter your new password" id="gmail"  required>
                 <i class='bx bxs-lock'></i>
             </div>
             <div class="login">
-              <button  type="submit" id="button">sumbit</button>
+              <button  type="submit" id="button">update password</button>
             </div>
         </form>
 

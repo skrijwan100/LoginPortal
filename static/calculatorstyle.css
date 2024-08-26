@@ -20,6 +20,9 @@ img{
     height: 35px;
     background-color: #02ea34;
 }
+img:hover{
+    background-color: #037f1e;
+}
 img:active{
     background-color: #92e9a5;
 }
@@ -54,10 +57,7 @@ nav{
 #valuein{
     height: 322px;
     width: 313px;
-    /* margin-top: 25px; */
-   /* margin-left: 5px; */
   overflow: hidden;
-  /* background-color: rgb(173, 251, 144); */
   backdrop-filter: blur(10px);
  
 }

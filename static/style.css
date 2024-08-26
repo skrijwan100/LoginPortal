@@ -142,3 +142,15 @@ button:active{
     background-color: rgb(105, 187, 238);
 
 }
+a{
+    text-decoration: none;
+}
+.ff{
+    text-decoration: none;
+    color: white;
+}
+.ff:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    color: aqua;
+}

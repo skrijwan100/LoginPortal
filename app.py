@@ -52,9 +52,7 @@ def register():
         cursor.execute("SELECT * FROM users WHERE email=%s", (gmail,))
         user = cursor.fetchone()
         cursor.close()
-        # flag=True 
         if user:   
-            # flag=False
             if(gmail==user[2]):
                 flash("You alraedy have a account on this email.")
                 return redirect("/register")
@@ -76,6 +74,37 @@ def register():
 @app.route("/calculator")
 def calculator():
     return render_template('calculator.html')
+
+@app.route("/password",methods=['POST','GET'])
+def password():
+    if request.method=='POST':
+        oldpassword=request.form['oldpassword']
+        newpassword=request.form['newpassword']
+        cursor=db.cursor()
+        try:
+            cursor.execute("SELECT password FROM users WHERE password=%s", (oldpassword,))
+            uerpassword=cursor.fetchone()
+            if uerpassword is None:
+                flash("Incorrect old password.")
+                return redirect("/password")
+
+            print(newpassword)
+            print(uerpassword[0])
+            if uerpassword[0]==oldpassword:
+                cursor.execute("SET SQL_SAFE_UPDATES = 0")
+                cursor.execute("UPDATE users SET password=%s WHERE password=%s",(newpassword,oldpassword))
+                flash("Password updated successfully.")
+                db.commit()
+                return redirect("/")
+           
+            return redirect("/password")
+        except Exception as e:
+            db.rollback()
+        finally:
+             cursor.close()
+
+
+    return render_template('forget.html')
 
 if __name__=="__main__":
     app.run(debug=True,port=7000)
