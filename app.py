@@ -1,6 +1,6 @@
 from flask import Flask,render_template,redirect,request,flash,url_for
 import mysql.connector
-import time
+
 
 app = Flask(__name__)
 app.secret_key = 'vwqolx$%jeu'
@@ -37,7 +37,7 @@ def index():
         except Exception as e:
             flash("An error occurred: {}".format(e))
         finally:
-            if cursor is not None:  # Ensure cursor is not None before closing
+            if cursor is not None:  
                 cursor.close()
     
     return render_template('index.html')
