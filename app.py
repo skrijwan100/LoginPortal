@@ -1,5 +1,6 @@
 from flask import Flask,render_template,redirect,request,flash,url_for
 import mysql.connector
+import bcrypt
 
 
 app = Flask(__name__)
@@ -15,6 +16,7 @@ cursor=db.cursor()
 
 @app.route("/", methods=['POST', 'GET'])
 def index():
+    
     cursor = None  # Initialize cursor before the try block
     if request.method == 'POST':
         email = request.form['email']
@@ -25,8 +27,9 @@ def index():
             user = cursor.fetchone()
             
             if user:
+                stored_password_hash = user[3]
                 # Check if the password matches
-                if password == user[3] and email == user[2]:  # Assuming user[3] is the password field
+                if bcrypt.checkpw(password.encode('utf-8'), stored_password_hash.encode('utf-8')):
                     return redirect("/calculator")
                 else:
                     flash("Password is incorrect")
@@ -48,18 +51,24 @@ def register():
         name = request.form['name']
         gmail = request.form['gmail']
         password = request.form['password']
+        print(password)
         cursor = db.cursor() 
         cursor.execute("SELECT * FROM users WHERE email=%s", (gmail,))
         user = cursor.fetchone()
         cursor.close()
+        
         if user:   
             if(gmail==user[2]):
                 flash("You alraedy have a account on this email.")
                 return redirect("/register")
         
+        salt = bcrypt.gensalt(10)
+        print(salt)
+        haspass= bcrypt.hashpw(password.encode('utf-8'), salt).decode('utf-8') # Hash and convert to string
+        print(haspass)
         try:
             cursor = db.cursor()  # Create a cursor object
-            cursor.execute("INSERT INTO users (name, email, password) VALUES (%s, %s, %s)", (name, gmail, password))
+            cursor.execute("INSERT INTO users (name, email, password) VALUES (%s, %s, %s)", (name, gmail, haspass))
             db.commit()  # Commit the changes to the database
         except mysql.connector.Error as err:
             print(f"Error: {err}")
